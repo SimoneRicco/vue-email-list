@@ -8,7 +8,7 @@ const app = Vue.createApp({
     methods: {
         getEmails() {
             for (let i = 0; i < this.emailNumber; i++) {
-                axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(ServerResponse => this.emailList[i] += ServerResponse.data.response);
+                axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(ServerResponse => this.emailList[i] = ServerResponse.data.response);
             }
         }
     },
