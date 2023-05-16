@@ -9,9 +9,12 @@
 </head>
 <body>
     <div id="app">
-        <p class="output">{{ emailList }}</p>
+        <ol class="output">
+            <li v-for="email in emailList" :key="email">{{ email }}</li>
+        </ol>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/script.js"></script>
 </body>
 </html>
